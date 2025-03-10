@@ -1,15 +1,15 @@
 {
   "source/admin.js": {
-    "file": "admin.DOFyi4Ou.js",
+    "file": "admin.BfTLlsov.js",
     "name": "admin",
     "src": "source/admin.js",
     "isEntry": true,
     "css": [
-      "admin.Dn_u-opx.css"
+      "admin.CGV5UbRp.css"
     ]
   },
   "source/main.js": {
-    "file": "main.hZfrAyS1.js",
+    "file": "main.CS3bPXEb.js",
     "name": "main",
     "src": "source/main.js",
     "isEntry": true,
@@ -25,7 +25,7 @@
       "source/scripts/modules/check-internal-exam.js"
     ],
     "css": [
-      "main.CtyjTQaX.css"
+      "main.BfW9ta1B.css"
     ]
   },
   "source/scripts/modules/authentication.js": {
