@@ -1,6 +1,6 @@
 {
-  "name": "Либідь-А",
-  "short_name": "Либідь-А",
+  "name": "SWPT",
+  "short_name": "SWPT",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#1995AD",
-  "background_color": "#1995AD",
+  "theme_color": "#0B0C0F",
+  "background_color": "#000000",
   "display": "standalone"
 }

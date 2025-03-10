@@ -9,7 +9,7 @@
     ]
   },
   "source/main.js": {
-    "file": "main.0JXFPi5B.js",
+    "file": "main.hZfrAyS1.js",
     "name": "main",
     "src": "source/main.js",
     "isEntry": true,
@@ -25,7 +25,7 @@
       "source/scripts/modules/check-internal-exam.js"
     ],
     "css": [
-      "main.DD3XI6Wd.css"
+      "main.CtyjTQaX.css"
     ]
   },
   "source/scripts/modules/authentication.js": {

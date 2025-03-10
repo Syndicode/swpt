@@ -22,3 +22,21 @@ body {
     font-size: 18px;
   }
 }
+
+body.admin-bar {
+  .header {
+    top: 66px;
+
+    @media (min-width: 783px) {
+      top: 52px;
+    }
+
+    @media (min-width: 1024px) {
+      top: 72px;
+    }
+  }
+
+  #wpadminbar {
+    position: fixed !important;
+  }
+}
