@@ -1,0 +1,37 @@
+/* Settings */
+@import "@styles/colors.css";
+@import "@styles/fonts.css";
+
+/* Libs */
+@import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+/* Components */
+@import "@styles/components/body.css";
+@import "@styles/components/wrapper.css";
+@import "@styles/components/heading.css";
+@import "@styles/components/caption.css";
+@import "@styles/components/gradient-layer.css";
+@import "@styles/components/main-nav.css";
+@import "@styles/components/mobile-nav.css";
+@import "@styles/components/button.css";
+@import "@styles/components/hamburger.css";
+@import "@styles/components/header.css";
+@import "@styles/components/footer.css";
+@import "@styles/components/section.css";
+@import "@styles/components/text.css";
+@import "@styles/components/questions.css";
+@import "@styles/components/answers.css";
+@import "@styles/components/loader.css";
+@import "@styles/components/form.css";
+@import "@styles/components/chapters.css";
+
+/* Blocks */
+@import "@styles/blocks/hero.css";
+@import "@styles/blocks/text-image.css";
+@import "@styles/blocks/entities-grid.css";
+@import "@styles/blocks/gallery.css";
+@import "@styles/blocks/text-form.css";
+@import "@styles/blocks/accordion.css";
+@import "@styles/blocks/rich-text.css";
+@import "@styles/blocks/contacts.css";
+@import "@styles/blocks/files.css";

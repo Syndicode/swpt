@@ -1,0 +1,14 @@
+:root {
+  --color-transparent: rgba(0, 0, 0, 0);
+  --color-white: #ffffff;
+  --color-black: #0B0C0F;
+  --color-black-60: #353945;
+  --color-black-40: #777E90;
+  --color-black-20: #B1B5C3;
+  --color-black-10: #E6E8EC;
+  --color-black-05: #F4F5F6;
+  --color-purple: #C69BFF;
+  --color-purple-80: #d6b9fc;
+  --color-purple-60: #e1cbff;
+  --main-color: var(--color-purple);
+}

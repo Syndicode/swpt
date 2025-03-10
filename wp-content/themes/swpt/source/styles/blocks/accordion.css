@@ -1,0 +1,135 @@
+.accordion__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion__item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #000000;
+}
+
+.accordion__item:first-child {
+  padding-top: 0;
+}
+
+.accordion__item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.accordion__item--active .accordion__arrow {
+  transform: rotate(180deg);
+  fill: red;
+}
+
+.accordion__item--active .accordion__text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.accordion__title {
+  position: relative;
+  cursor: pointer;
+  transition: color 0.5s ease-out;
+  padding-right: 28px;
+
+  @media (min-width: 1280px) {
+    padding-right: 32px;
+  }
+}
+
+.accordion__arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 20px;
+  height: auto;
+  /*transform: rotate(45deg);*/
+
+  @media (min-width: 1280px) {
+    width: 26px;
+    /*opacity: 0;*/
+    /*transform: rotate(45deg) translateX(-12px);*/
+    transition: all 0.5s ease-out;
+  }
+}
+
+.accordion__text-holder {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.accordion__text {
+  max-width: 928px;
+  padding-top: 16px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.5s ease-out 0.3s;
+}
+
+.animate.accordion {
+  .heading,
+  .caption,
+  .accordion__item {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: all 0.4s ease;
+  }
+
+  .caption {
+    transition-delay: 0.1s;
+  }
+
+  .accordion__item:nth-child(2) {
+    transition-delay: 0.1s;
+  }
+
+  .accordion__item:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+
+  .accordion__item:nth-child(4) {
+    transition-delay: 0.3s;
+  }
+
+  .accordion__item:nth-child(5) {
+    transition-delay: 0.4s;
+  }
+
+  .accordion__item:nth-child(6) {
+    transition-delay: 0.5s;
+  }
+
+  .accordion__item:nth-child(7) {
+    transition-delay: 0.6s;
+  }
+
+  .accordion__item:nth-child(8) {
+    transition-delay: 0.7s;
+  }
+
+  .accordion__item:nth-child(9) {
+    transition-delay: 0.8s;
+  }
+
+  .accordion__item:nth-child(10) {
+    transition-delay: 0.9s;
+  }
+
+  .accordion__item:nth-child(11) {
+    transition-delay: 1s;
+  }
+}
+
+.animate--active.accordion {
+  .heading,
+  .caption,
+  .accordion__item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

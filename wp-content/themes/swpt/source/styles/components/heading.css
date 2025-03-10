@@ -1,0 +1,146 @@
+:root {
+  --h1-base-size: 100px;
+  --h2-base-size: calc(var(--h1-base-size) - var(--h1-base-size) * 0.2);
+  --h3-base-size: calc(var(--h2-base-size) - var(--h2-base-size) * 0.2);
+  --h4-base-size: calc(var(--h3-base-size) - var(--h3-base-size) * 0.2);
+  --h5-base-size: calc(var(--h4-base-size) - var(--h4-base-size) * 0.2);
+  --h6-base-size: calc(var(--h5-base-size) - var(--h5-base-size) * 0.2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  margin: 0;
+  font-family: "PPNeueMachina", sans-serif;
+  line-height: 1;
+}
+
+h1,
+.heading--h1 {
+  font-size: calc(var(--h1-base-size) * 0.64);
+}
+
+h2,
+.heading--h2 {
+  font-size: calc(var(--h2-base-size) * 0.64);
+}
+
+h3,
+.heading--h3 {
+  font-size: calc(var(--h3-base-size) * 0.64);
+}
+
+h4,
+.heading--h4 {
+  font-size: calc(var(--h4-base-size) * 0.64);
+}
+
+h5,
+.heading--h5 {
+  font-size: calc(var(--h5-base-size) * 0.64);
+}
+
+h6,
+.heading--h6 {
+  font-size: calc(var(--h6-base-size) * 0.64);
+}
+
+@media (min-width: 768px) {
+  h1,
+  .heading--h1 {
+    font-size: calc(var(--h1-base-size) * 0.8);
+  }
+
+  h2,
+  .heading--h2 {
+    font-size: calc(var(--h2-base-size) * 0.8);
+  }
+
+  h3,
+  .heading--h3 {
+    font-size: calc(var(--h3-base-size) * 0.8);
+  }
+
+  h4,
+  .heading--h4 {
+    font-size: calc(var(--h4-base-size) * 0.8);
+  }
+
+  h5,
+  .heading--h5 {
+    font-size: calc(var(--h5-base-size) * 0.8);
+  }
+
+  h6,
+  .heading--h6 {
+    font-size: calc(var(--h6-base-size) * 0.8);
+  }
+}
+
+@media (min-width: 1280px) {
+  h1,
+  .heading--h1 {
+    font-size: var(--h1-base-size);
+  }
+
+  h2,
+  .heading--h2 {
+    font-size: var(--h2-base-size);
+  }
+
+  h3,
+  .heading--h3 {
+    font-size: var(--h3-base-size);
+  }
+
+  h4,
+  .heading--h4 {
+    font-size: var(--h4-base-size);
+  }
+
+  h5,
+  .heading--h5 {
+    font-size: var(--h5-base-size);
+  }
+
+  h6,
+  .heading--h6 {
+    font-size: var(--h6-base-size);
+  }
+}
+
+@media (min-width: 1920px) {
+  h1,
+  .heading--h1 {
+    font-size: calc(var(--h1-base-size) * 1.12);
+  }
+
+  h2,
+  .heading--h2 {
+    font-size: calc(var(--h2-base-size) * 1.12);
+  }
+
+  h3,
+  .heading--h3 {
+    font-size: calc(var(--h3-base-size) * 1.12);
+  }
+
+  h4,
+  .heading--h4 {
+    font-size: calc(var(--h4-base-size) * 1.12);
+  }
+
+  h5,
+  .heading--h5 {
+    font-size: calc(var(--h5-base-size) * 1.12);
+  }
+
+  h6,
+  .heading--h6 {
+    font-size: calc(var(--h6-base-size) * 1.12);
+  }
+}

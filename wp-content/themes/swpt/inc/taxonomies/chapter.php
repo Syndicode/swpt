@@ -1,0 +1,41 @@
+<?php
+return [
+	'taxonomy'    => 'chapter',
+	'object_type' => 'question',
+	'args'        => [
+		'label'                 => __( 'Chapter', 'school' ),
+		'labels'                => [
+			'name'              => __( 'Chapter', 'school' ),
+			'singular_name'     => __( 'Chapter', 'school' ),
+			'search_items'      => __( 'Search Chapters', 'school' ),
+			'all_items'         => __( 'All Chapters', 'school' ),
+			'view_item '        => __( 'View Chapter', 'school' ),
+			'parent_item'       => __( 'Parent Chapter', 'school' ),
+			'parent_item_colon' => __( 'Parent Chapter:', 'school' ),
+			'edit_item'         => __( 'Edit Chapter', 'school' ),
+			'update_item'       => __( 'Update Chapter', 'school' ),
+			'add_new_item'      => __( 'Add new Chapter', 'school' ),
+			'new_item_name'     => __( 'New Chapter name', 'school' ),
+			'menu_name'         => __( 'Chapters', 'school' ),
+		],
+		'description'           => '',
+		'public'                => true,
+		'publicly_queryable'    => true,
+		'show_in_nav_menus'     => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'show_tagcloud'         => true,
+		'show_in_rest'          => true,
+		'hierarchical'          => true,
+		'update_count_callback' => '',
+		'rewrite'               => [
+			'slug'         => 'chapters',
+			'hierarchical' => true
+		],
+		'capabilities'          => [],
+		'meta_box_cb'           => null,
+		'show_admin_column'     => false,
+		'show_in_quick_edit'    => true,
+		'_builtin'              => false,
+	],
+];

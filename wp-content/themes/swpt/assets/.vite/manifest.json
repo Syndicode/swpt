@@ -1,0 +1,85 @@
+{
+  "source/admin.js": {
+    "file": "admin.BhOsiPxw.js",
+    "name": "admin",
+    "src": "source/admin.js",
+    "isEntry": true,
+    "css": [
+      "admin.DjfNZ_xC.css"
+    ]
+  },
+  "source/main.js": {
+    "file": "main.BY-VdZs6.js",
+    "name": "main",
+    "src": "source/main.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "source/scripts/modules/init-animations.js",
+      "source/scripts/modules/init-fancybox.js",
+      "source/scripts/modules/toggle-accordion.js",
+      "source/scripts/modules/check-test.js",
+      "source/scripts/modules/authentication.js",
+      "source/scripts/modules/reset-progress.js",
+      "source/scripts/modules/toggle-mobile-nav.js",
+      "source/scripts/modules/init-exam-timer.js",
+      "source/scripts/modules/check-internal-exam.js"
+    ],
+    "css": [
+      "main.CExyQlKr.css"
+    ]
+  },
+  "source/scripts/modules/authentication.js": {
+    "file": "_chunk.CrBv02qy.js",
+    "name": "authentication",
+    "src": "source/scripts/modules/authentication.js",
+    "isDynamicEntry": true
+  },
+  "source/scripts/modules/check-internal-exam.js": {
+    "file": "_chunk.BA-tU8sr.js",
+    "name": "check-internal-exam",
+    "src": "source/scripts/modules/check-internal-exam.js",
+    "isDynamicEntry": true
+  },
+  "source/scripts/modules/check-test.js": {
+    "file": "_chunk.Dit6yHWO.js",
+    "name": "check-test",
+    "src": "source/scripts/modules/check-test.js",
+    "isDynamicEntry": true
+  },
+  "source/scripts/modules/init-animations.js": {
+    "file": "_chunk.Delbh4B0.js",
+    "name": "init-animations",
+    "src": "source/scripts/modules/init-animations.js",
+    "isDynamicEntry": true
+  },
+  "source/scripts/modules/init-exam-timer.js": {
+    "file": "_chunk.B9sMeYBz.js",
+    "name": "init-exam-timer",
+    "src": "source/scripts/modules/init-exam-timer.js",
+    "isDynamicEntry": true
+  },
+  "source/scripts/modules/init-fancybox.js": {
+    "file": "_chunk.DAhmmDnK.js",
+    "name": "init-fancybox",
+    "src": "source/scripts/modules/init-fancybox.js",
+    "isDynamicEntry": true
+  },
+  "source/scripts/modules/reset-progress.js": {
+    "file": "_chunk.BBwRzxZf.js",
+    "name": "reset-progress",
+    "src": "source/scripts/modules/reset-progress.js",
+    "isDynamicEntry": true
+  },
+  "source/scripts/modules/toggle-accordion.js": {
+    "file": "_chunk.d1cMw5Hx.js",
+    "name": "toggle-accordion",
+    "src": "source/scripts/modules/toggle-accordion.js",
+    "isDynamicEntry": true
+  },
+  "source/scripts/modules/toggle-mobile-nav.js": {
+    "file": "_chunk.DjGs3uVK.js",
+    "name": "toggle-mobile-nav",
+    "src": "source/scripts/modules/toggle-mobile-nav.js",
+    "isDynamicEntry": true
+  }
+}

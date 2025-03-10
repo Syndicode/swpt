@@ -1,0 +1,151 @@
+.header {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 6px 16px;
+  box-sizing: border-box;
+  background-color: var(--color-white);
+  border-radius: 150px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+
+  @media (min-width: 768px) {
+    padding: 6px 20px;
+  }
+
+  @media (min-width: 1024px) {
+    top: 40px;
+    width: 900px;
+    padding: 8px 24px;
+    left: calc(50% - 450px);
+  }
+
+  @media (min-width: 1280px) {
+    width: 1000px;
+    left: calc(50% - 500px);
+  }
+
+  @media (min-width: 1440px) {
+    width: 1200px;
+    left: calc(50% - 600px);
+    padding: 14px 32px;
+  }
+}
+
+.header__logo {
+  position: relative;
+  top: 2px;
+  display: block;
+  margin-right: auto;
+
+  @media (min-width: 768px) {
+    margin-right: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-right: 80px;
+  }
+}
+
+.header__logo-image {
+  display: block;
+  width: 124px;
+  height: auto;
+
+  @media (min-width: 768px) {
+    width: 140px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 160px;
+  }
+}
+
+.header__main-nav {
+  display: none;
+  margin-left: auto;
+  margin-right: 20px;
+
+  @media (min-width: 1280px) {
+    display: flex;
+  }
+}
+
+.header__user-section {
+  display: none;
+  margin-right: 20px;
+
+  @media (min-width: 1280px) {
+    display: block;
+  }
+}
+
+.header__user-login {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  text-decoration: none;
+  color: #1995AD;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.header__cta {
+  display: none!important;
+
+  @media (min-width: 1280px) {
+    display: inline-flex;
+  }
+}
+
+.header__hamburger {
+
+  @media (min-width: 768px) {
+    margin-left: auto;
+  }
+
+  @media (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.header__phones {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__phone {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 8px;
+  font-size: 16px;
+  color: #666;
+  text-decoration: none;
+
+ @media (min-width: 768px) {
+   color: inherit;
+ }
+
+
+  @media (min-width: 1440px) {
+    font-size: 18px;
+  }
+
+  & span {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: inline;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 16px;
+    }
+  }
+}

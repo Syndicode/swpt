@@ -1,0 +1,125 @@
+.button:not(.button--simple) {
+  -webkit-appearance: none;
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 152px;
+  height: auto;
+  margin: 0;
+  padding: 14px 22px 14px;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.button--cyan {
+  background-color: #1995AD;
+  color: #fff;
+  border: 1px solid #1995AD!important;
+
+  &:not(:disabled):hover {
+    background-color: #fff;
+    color: #1995AD;
+    border: 1px solid #1995AD;
+  }
+}
+
+.button--cyan-border {
+  background-color: #FFF;
+  color: #1995AD;
+  border: 1px solid #1995AD!important;
+
+  &:hover {
+    background-color: #1995AD;
+    color: #FFF;
+  }
+}
+
+.button--white {
+  background-color: #fff;
+  color: #1995AD;
+  border: 1px solid #FFF;
+
+  &:hover {
+    background-color: #1995AD;
+    color: #fff;
+  }
+}
+
+.button--white-border {
+  background-color: #1995AD;
+  color: #fff;
+  border: 1px solid #FFFFFF;
+
+  &:hover {
+    background-color: #fff;
+    color: #1995AD;
+  }
+}
+
+.button--simple {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+
+  & svg {
+    transition: all 0.4s ease-in-out;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 20px;
+  }
+}
+
+.button--simple:hover {
+  & svg {
+    transform: translateX(4px);
+  }
+  transition: all 0.3s ease-in-out;
+}
+
+.button--red {
+  background-color: #ad0000;
+  color: #FFF;
+  border: 1px solid #ad0000!important;
+
+  &:hover {
+    background-color: #FFF;
+    color: #ad0000;
+    border: 1px solid #ad0000;
+  }
+}
+
+.button--red-border {
+  background-color: #FFF;
+  color: #ad0000;
+  border: 1px solid #ad0000!important;
+
+  &:hover {
+    background-color: #ad0000;
+    color: #FFF;
+    border: 1px solid #ad0000;
+  }
+}

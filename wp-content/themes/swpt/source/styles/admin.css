@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "@styles/colors.css";
+@import "@styles/fonts.css";
+
+/* Components */
+@import "@styles/components/wrapper.css";
+@import "@styles/components/heading.css";
+@import "@styles/components/caption.css";
+@import "@styles/components/gradient-layer.css";
+@import "@styles/components/main-nav.css";
+@import "@styles/components/button.css";
+@import "@styles/components/hamburger.css";
+@import "@styles/components/header.css";
+@import "@styles/components/footer.css";
+@import "@styles/components/section.css";
+@import "@styles/components/text.css";
+@import "@styles/components/questions.css";
+@import "@styles/components/answers.css";
+
+/* Blocks */
+@import "@styles/blocks/hero.css";
+@import "@styles/blocks/text-image.css";
+@import "@styles/blocks/entities-grid.css";
+@import "@styles/blocks/gallery.css";
+@import "@styles/blocks/text-form.css";
+@import "@styles/blocks/accordion.css";
+@import "@styles/blocks/rich-text.css";
+@import "@styles/blocks/contacts.css";
+@import "@styles/blocks/files.css";
+
+div.acf-block-preview {
+  max-width: none!important;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.is-not-visible {
+  opacity: 0.3;
+}

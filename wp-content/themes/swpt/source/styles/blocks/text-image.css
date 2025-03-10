@@ -1,0 +1,152 @@
+.text-image {
+}
+
+.text-image__wrapper {
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+    align-items: flex-start;
+  }
+
+  @media (min-width: 1280px) {
+    column-gap: 48px;
+  }
+
+  @media (min-width: 1440px) {
+    column-gap: 64px;
+  }
+}
+
+.text-image__wrapper--middle {
+  @media (min-width: 768px) {
+    align-items: center;
+  }
+}
+
+.text-image__wrapper--bottom {
+  @media (min-width: 768px) {
+    align-items: flex-end;
+  }
+}
+
+.text-image__wrapper--image-text {
+  & .text-image__text-holder {
+    @media (min-width: 768px) {
+      order: 2;
+    }
+  }
+
+  & .text-image__image-holder {
+    @media (min-width: 768px) {
+      order: 1;
+    }
+  }
+}
+
+.text-image__wrapper--2-3 {
+  @media (min-width: 1024px) {
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+.text-image__wrapper--3-2 {
+  @media (min-width: 1024px) {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.text-image__text-holder {
+  order: 1;
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.text-image__text-holder--center {
+  @media (min-width: 768px) {
+    text-align: center;
+  }
+}
+
+.text-image__text-holder--right {
+  @media (min-width: 768px) {
+    text-align: right;
+  }
+}
+
+.text-image__image-holder {
+  order: 2;
+}
+
+.text-image__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text-image__cta {
+  margin-top: 24px !important;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.animate.text-image {
+  .heading,
+  .caption,
+  .text-image__cta-holder,
+  .text-image__image {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: all 0.4s ease;
+  }
+
+  .text-image__wrapper--text-image {
+    .heading {
+      transition-delay: 0.1s;
+    }
+
+    .caption{
+      transition-delay: 0.2s;
+    }
+
+    .text-image__cta-holder {
+      transition-delay: 0.3s;
+    }
+
+    .text-image__image {
+      transition-delay: 0.4s;
+    }
+  }
+
+  .text-image__wrapper--image-text {
+    .heading {
+      transition-delay: 0.2s;
+    }
+
+    .caption{
+      transition-delay: 0.3s;
+    }
+
+    .text-image__cta-holder {
+      transition-delay: 0.4s;
+    }
+
+    .text-image__image {
+      transition-delay: 0.1s;
+    }
+  }
+}
+
+.animate--active.text-image {
+  .heading,
+  .caption,
+  .text-image__cta-holder,
+  .text-image__image {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'PPNeueMachina';
+  src: resolve('PPNeueMachina-InktrapRegular.woff2') format('woff2'),
+  resolve('PPNeueMachina-InktrapRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PPTelegraf';
+  src: resolve('PPTelegraf-Regular.woff2') format('woff2'),
+  resolve('PPTelegraf-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PPTelegraf';
+  src: resolve('PPTelegraf-Medium.woff2') format('woff2'),
+  resolve('PPTelegraf-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PPTelegraf';
+  src: resolve('PPTelegraf-Bold.woff2') format('woff2'),
+  resolve('PPTelegraf-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
