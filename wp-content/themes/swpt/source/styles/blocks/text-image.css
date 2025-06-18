@@ -97,6 +97,7 @@
 .animate.text-image {
   .heading,
   .caption,
+  .text,
   .text-image__cta-holder,
   .text-image__image {
     opacity: 0;
@@ -111,6 +112,10 @@
 
     .caption{
       transition-delay: 0.2s;
+    }
+
+    .text {
+      transition-delay: 0.25s;
     }
 
     .text-image__cta-holder {
@@ -144,6 +149,7 @@
 .animate--active.text-image {
   .heading,
   .caption,
+  .text,
   .text-image__cta-holder,
   .text-image__image {
     opacity: 1;

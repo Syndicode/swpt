@@ -1,12 +1,10 @@
 <?php
 
 // Option pages
-require_once TEMPLATE_DIR . '/inc/acf/option-pages/fonts.php';
+//require_once TEMPLATE_DIR . '/inc/acf/option-pages/colors.php';
 
 // Fields
-require_once TEMPLATE_DIR . '/inc/acf/fields/post-type-question.php';
-require_once TEMPLATE_DIR . '/inc/acf/fields/post-type-group.php';
-require_once TEMPLATE_DIR . '/inc/acf/fields/option-page-fonts.php';
+//require_once TEMPLATE_DIR . '/inc/acf/fields/option-page-colors.php';
 
 // Init Blocks and block fields
 $blocks_dir = get_template_directory() . '/inc/acf/blocks/';

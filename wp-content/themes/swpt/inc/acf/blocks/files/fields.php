@@ -104,10 +104,11 @@ $fields->addLink( 'cta', array(
 $fields->addSelect( 'cta_style', array(
 	'label'   => __( 'CTA Style', 'dovira' ),
 	'choices' => array(
-		'cyan'         => __( 'Cyan', 'dovira' ),
-		'white'        => __( 'White', 'dovira' ),
-		'cyan-border'  => __( 'Cyan Border', 'dovira' ),
-		'white-border' => __( 'White Border', 'dovira' ),
+		'purple-white' => __('Purple/White', 'school'),
+		'purple-black' => __('Purple/Black', 'school'),
+		'purple-border' => __('Purple border', 'school'),
+		'white-purple' => __('White/Purple', 'school'),
+		'white-black' => __('White/Black', 'school'),
 	),
 ) );
 

@@ -8,10 +8,15 @@
   display: flex;
   margin: 0;
   padding: 0;
-  column-gap: 20px;
+  column-gap: 16px;
+
+  @media (min-width: 1440px) {
+    column-gap: 20px;
+  }
 }
 
-.main-nav__list li.current-menu-item a {
+.main-nav__list li.current-menu-item a,
+.main-nav__list li.current-menu-item span {
   font-weight: 600;
 
   &::after {
@@ -20,7 +25,90 @@
   }
 }
 
+.main-nav__list .menu-item {
+  position: relative;
+
+  & .sub-menu {
+    list-style-type: none;
+    position: absolute;
+    top: calc(100% + 16px);
+    left: calc(50% - 150px);
+    display: block;
+    width: 300px;
+    margin: 0;
+    padding: 16px;
+    box-sizing: border-box;
+    background-color: var(--color-purple);
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.05);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 16px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: calc(50% - 6px);
+      display: block;
+      width: 12px;
+      height: 12px;
+      transform: rotate(45deg);
+      background-color: var(--color-purple);
+    }
+
+    & li {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    & li.current-menu-item a,
+    & li.current-menu-item span {
+      font-weight: 600;
+      color: #fff;
+
+      &::after {
+        transform-origin: left;
+        transform: scaleX(1);
+        background-color: #fff
+      }
+    }
+
+    & a {
+      color: #fff;
+      text-decoration: none;
+
+      &::after {
+        background-color: #fff
+      }
+    }
+  }
+
+  &:hover {
+    & .sub-menu {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
 .main-nav__list li a,
+.main-nav__list li span,
 .main-nav__link {
   position: relative;
   display: inline-flex;
@@ -32,7 +120,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -4px;
+    bottom: -3px;
     left: 0;
     right: 0;
     display: block;

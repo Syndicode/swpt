@@ -1,15 +1,15 @@
 {
   "source/admin.js": {
-    "file": "admin.BfTLlsov.js",
+    "file": "admin.BMfnB1yF.js",
     "name": "admin",
     "src": "source/admin.js",
     "isEntry": true,
     "css": [
-      "admin.CGV5UbRp.css"
+      "admin.C7TQO-rO.css"
     ]
   },
   "source/main.js": {
-    "file": "main.CS3bPXEb.js",
+    "file": "main._JHk6yAi.js",
     "name": "main",
     "src": "source/main.js",
     "isEntry": true,
@@ -25,7 +25,7 @@
       "source/scripts/modules/check-internal-exam.js"
     ],
     "css": [
-      "main.BfW9ta1B.css"
+      "main.B6JKgwUp.css"
     ]
   },
   "source/scripts/modules/authentication.js": {
@@ -59,7 +59,7 @@
     "isDynamicEntry": true
   },
   "source/scripts/modules/init-fancybox.js": {
-    "file": "_chunk.DAhmmDnK.js",
+    "file": "_chunk.l2-adHt2.js",
     "name": "init-fancybox",
     "src": "source/scripts/modules/init-fancybox.js",
     "isDynamicEntry": true

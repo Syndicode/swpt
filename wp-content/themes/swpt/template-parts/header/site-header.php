@@ -13,7 +13,7 @@
 	<?php endif; ?>
 	<?= wp_nav_menu( array(
 		'theme_location'  => 'primary',
-		'depth'           => 1,
+		'depth'           => 2,
 		'container'       => 'nav',
 		'menu_class'      => 'main-nav__list',
 		'container_class' => 'main-nav header__main-nav',

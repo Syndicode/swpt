@@ -36,6 +36,10 @@ $margin_bottom        = school_get_acf_field( 'margin_bottom' );
 $form                 = school_get_acf_field( 'form' );
 $form_cta_style       = school_get_acf_field( 'form_cta_style' );
 
+if ( $is_preview ) :
+	$heading_level = 'span';
+endif;
+
 ?>
 <?php if ( $is_visible || $is_preview ) : ?>
 	<!-- TEXT/FORM start -->

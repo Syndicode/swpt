@@ -20,6 +20,6 @@ module.exports = {
     'postcss-replace': {
       pattern: '.acf-block-preview .acf-block-preview',
       data: { replaceAll: '.acf-block-preview' }
-    }
+    },
   },
 };

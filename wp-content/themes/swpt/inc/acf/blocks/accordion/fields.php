@@ -104,6 +104,7 @@ $fields->addTab( 'accordion_tab', array(
 $fields->addRepeater( 'accordion_items', array(
 	'label'    => __( 'Accordion', 'school' ),
 	'required' => 1,
+	'layout'   => 'block',
 ) )
        ->addText( 'accordion-item-title', array(
 	       'label'    => __( 'Title', 'school' ),

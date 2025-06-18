@@ -104,10 +104,11 @@ $fields->addLink( 'cta', array(
 $fields->addSelect( 'cta_style', array(
 	'label'   => __( 'CTA Style', 'school' ),
 	'choices' => array(
-		'cyan'         => __( 'Cyan', 'school' ),
-		'white'        => __( 'White', 'school' ),
-		'cyan-border'  => __( 'Cyan Border', 'school' ),
-		'white-border' => __( 'White Border', 'school' ),
+		'purple-white' => __('Purple/White', 'school'),
+		'purple-black' => __('Purple/Black', 'school'),
+		'purple-border' => __('Purple border', 'school'),
+		'white-purple' => __('White/Purple', 'school'),
+		'white-black' => __('White/Black', 'school'),
 	),
 ) );
 

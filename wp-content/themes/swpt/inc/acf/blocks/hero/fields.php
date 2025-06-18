@@ -139,8 +139,11 @@ $fields->addLink( 'cta', array(
 $fields->addSelect( 'cta_style', array(
 	'label'   => __( 'Primary CTA Style', 'school' ),
 	'choices' => array(
-		'cyan' => __('Cyan', 'school'),
-		'white' => __('White', 'school'),
+		'purple-white' => __('Purple/White', 'school'),
+		'purple-black' => __('Purple/Black', 'school'),
+		'purple-border' => __('Purple border', 'school'),
+		'white-purple' => __('White/Purple', 'school'),
+		'white-black' => __('White/Black', 'school'),
 	),
 ) );
 
@@ -151,8 +154,11 @@ $fields->addLink( 'secondary_cta', array(
 $fields->addSelect( 'secondary_cta_style', array(
 	'label'   => __( 'Secondary CTA Style', 'school' ),
 	'choices' => array(
-		'cyan' => __('Cyan', 'school'),
-		'white' => __('White', 'school'),
+		'purple-white' => __('Purple/White', 'school'),
+		'purple-black' => __('Purple/Black', 'school'),
+		'purple-border' => __('Purple border', 'school'),
+		'white-purple' => __('White/Purple', 'school'),
+		'white-black' => __('White/Black', 'school'),
 	),
 ) );
 

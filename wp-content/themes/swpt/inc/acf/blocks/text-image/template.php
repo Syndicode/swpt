@@ -35,6 +35,10 @@ $gradient_direction   = school_get_acf_field( 'gradient_direction' );
 $background_color     = school_get_acf_field( 'background_color' );
 $margin_bottom        = school_get_acf_field( 'margin_bottom' );
 
+if ( $is_preview ) :
+	$heading_level = 'span';
+endif;
+
 ?>
 <?php if ( $is_visible || $is_preview ) : ?>
 	<!-- TEXT/IMAGE start -->

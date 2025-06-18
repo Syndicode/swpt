@@ -1,4 +1,4 @@
-.button:not(.button--simple) {
+.button {
   -webkit-appearance: none;
   position: relative;
   z-index: 1;
@@ -27,99 +27,60 @@
   cursor: default;
 }
 
-.button--cyan {
-  background-color: #1995AD;
-  color: #fff;
-  border: 1px solid #1995AD!important;
+.button--purple-white {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  border: 1px solid var(--color-purple);
 
   &:not(:disabled):hover {
-    background-color: #fff;
-    color: #1995AD;
-    border: 1px solid #1995AD;
+    background-color: var(--color-white);
+    color: var(--color-purple);
+    border: 1px solid var(--color-white);
   }
 }
 
-.button--cyan-border {
-  background-color: #FFF;
-  color: #1995AD;
-  border: 1px solid #1995AD!important;
+.button--purple-black {
+  background-color: var(--color-purple);
+  color: var(--color-black);
+  border: 1px solid var(--color-purple);
+
+  &:not(:disabled):hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-white);
+  }
+}
+
+.button--purple-border {
+  background-color: var(--color-white);
+  color: var(--color-purple);
+  border: 1px solid var(--color-purple);
 
   &:hover {
-    background-color: #1995AD;
-    color: #FFF;
+    background-color: var(--color-purple);
+    color: var(--color-white);
   }
 }
 
-.button--white {
-  background-color: #fff;
-  color: #1995AD;
-  border: 1px solid #FFF;
+.button--white-purple {
+  background-color: var(--color-white);
+  color: var(--color-purple);
+  border: 1px solid var(--color-white);
 
   &:hover {
-    background-color: #1995AD;
-    color: #fff;
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    border: 1px solid var(--color-purple);
   }
 }
 
-.button--white-border {
-  background-color: #1995AD;
-  color: #fff;
-  border: 1px solid #FFFFFF;
+.button--white-black {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-white);
 
   &:hover {
-    background-color: #fff;
-    color: #1995AD;
-  }
-}
-
-.button--simple {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1;
-  color: inherit;
-  text-decoration: none;
-  transition: all 0.4s ease-in-out;
-
-  & svg {
-    transition: all 0.4s ease-in-out;
-  }
-
-  @media (min-width: 1280px) {
-    font-size: 20px;
-  }
-}
-
-.button--simple:hover {
-  & svg {
-    transform: translateX(4px);
-  }
-  transition: all 0.3s ease-in-out;
-}
-
-.button--red {
-  background-color: #ad0000;
-  color: #FFF;
-  border: 1px solid #ad0000!important;
-
-  &:hover {
-    background-color: #FFF;
-    color: #ad0000;
-    border: 1px solid #ad0000;
-  }
-}
-
-.button--red-border {
-  background-color: #FFF;
-  color: #ad0000;
-  border: 1px solid #ad0000!important;
-
-  &:hover {
-    background-color: #ad0000;
-    color: #FFF;
-    border: 1px solid #ad0000;
+    background-color: var(--color-black);
+    color: var(--color-white);
   }
 }

@@ -32,6 +32,11 @@ $secondary_cta        = school_get_acf_field( 'secondary_cta' );
 $secondary_cta_style  = school_get_acf_field( 'secondary_cta_style' );
 $background_image     = school_get_acf_field( 'background_image' );
 $margin_bottom        = school_get_acf_field( 'margin_bottom' );
+
+if ( $is_preview ) :
+	$heading_level = 'span';
+endif;
+
 ?>
 <?php if ( $is_visible || $is_preview ) : ?>
 	<!-- HERO start -->

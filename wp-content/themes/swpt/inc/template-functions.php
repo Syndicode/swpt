@@ -138,8 +138,27 @@ function swpt_vite_admin_head_module(): void {
 	}
 }
 
-add_action( 'admin_head', 'swpt_vite_admin_head_module' );
+//add_action( 'admin_head', 'swpt_vite_admin_head_module' );
 
+function whichcar_insert_styles_for_editor_blocks(): void {
+	$styles = file_get_contents( swpt_vite_asset( 'source/admin.css' ) );
+	if ( $styles ) {
+		$styles = str_replace( [
+			'../fonts/',
+			'.acf-block-preview .acf-block-preview .acf-block-preview',
+			'.acf-block-preview .acf-block-preview',
+			'.acf-block-preview div.acf-block-preview',
+		], [
+			TEMPLATE_DIR_URI . '/build/fonts/',
+			'.acf-block-preview',
+			'.acf-block-preview',
+			'.acf-block-preview',
+		], $styles );
+		echo '<style id="admin-inline-css">' . $styles . '</style>';
+	}
+}
+
+add_action( 'admin_head', 'whichcar_insert_styles_for_editor_blocks' );
 
 /**
  * Enqueue scripts and styles.
@@ -185,6 +204,8 @@ function swpt_admin_scripts(): void {
 }
 
 add_action( 'admin_enqueue_scripts', 'swpt_admin_scripts' );
+
+
 
 /**
  * Defer loading of JavaScript assets

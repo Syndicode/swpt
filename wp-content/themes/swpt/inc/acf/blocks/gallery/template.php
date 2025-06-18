@@ -29,6 +29,10 @@ $gradient_direction   = school_get_acf_field( 'gradient_direction' );
 $background_color     = school_get_acf_field( 'background_color' );
 $margin_bottom        = school_get_acf_field( 'margin_bottom' );
 
+if ( $is_preview ) :
+	$heading_level = 'span';
+endif;
+
 ?>
 <?php if ( $is_visible || $is_preview ) : ?>
 	<!-- GALLERY start -->
@@ -44,7 +48,7 @@ $margin_bottom        = school_get_acf_field( 'margin_bottom' );
 				 aria-hidden="true"></div>
 		<?php endif; ?>
 		<div class="wrapper gallery__wrapper">
-			<header class="section__header section__header-align--<?= $header_text_align; ?>">
+			<header class="section__header section__header--align-<?= $header_text_align; ?> gallery__section-header">
 				<?php if ( ! empty( $heading ) ) : ?>
 					<?= '<' . $heading_level . ' class="heading heading--' . $heading_style . '" style="color: ' . $heading_color . ';">' . $heading . '</' . $heading_level . '>'; ?>
 				<?php endif; ?>
