@@ -118,7 +118,8 @@ add_action( 'after_setup_theme', 'swpt_setup' );
  * @return void
  */
 function swpt_vite_head_module(): void {
-	if ( wp_get_environment_type() === 'development' ) {
+	$env_type = wp_get_environment_type();
+	if ( $env_type === 'development' ) {
 		echo '<script type="module" src="' . VITE_SERVER . VITE_ENTRY_POINT . '"></script>';
 	}
 }

@@ -12,7 +12,8 @@ $dotenv->safeLoad();
 
 define( 'VITE_SERVER', isset( $_ENV['VITE_SERVER_PORT'] ) && ! empty( $_ENV['VITE_SERVER_PORT'] ) ? 'http://localhost:' . $_ENV['VITE_SERVER_PORT'] : 'http://localhost:3000' );
 define( 'VITE_ENTRY_POINT', isset( $_ENV['VITE_ENTRY_POINT'] ) && ! empty( $_ENV['VITE_ENTRY_POINT'] ) ? $_ENV['VITE_ENTRY_POINT'] : '/source/main.js' );
-define( 'WP_ENVIRONMENT_TYPE', isset( $_ENV['WP_ENVIRONMENT_TYPE'] ) && ! empty( $_ENV['WP_ENVIRONMENT_TYPE'] ) ? $_ENV['WP_ENVIRONMENT_TYPE'] : 'production' );
+defined( 'WP_ENVIRONMENT_TYPE' ) || define( 'WP_ENVIRONMENT_TYPE',
+	isset( $_ENV['WP_ENVIRONMENT_TYPE'] ) && ! empty( $_ENV['WP_ENVIRONMENT_TYPE'] ) ? $_ENV['WP_ENVIRONMENT_TYPE'] : 'production' );
 define( 'ASSETS_DIR_URI', wp_get_environment_type() === 'development' ? TEMPLATE_DIR_URI . '/source' : TEMPLATE_DIR_URI . '/assets' );
 
 /**
