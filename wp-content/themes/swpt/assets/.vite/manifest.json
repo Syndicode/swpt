@@ -1,15 +1,15 @@
 {
   "source/admin.js": {
-    "file": "admin.CO_n84A-.js",
+    "file": "admin.DxaKn4Sh.js",
     "name": "admin",
     "src": "source/admin.js",
     "isEntry": true,
     "css": [
-      "admin.CViDf_gB.css"
+      "admin.OqpyQm0O.css"
     ]
   },
   "source/main.js": {
-    "file": "main.BFz_mCWw.js",
+    "file": "main.BgW_dfMv.js",
     "name": "main",
     "src": "source/main.js",
     "isEntry": true,
@@ -20,7 +20,7 @@
       "source/scripts/modules/toggle-mobile-nav.js"
     ],
     "css": [
-      "main.DiSucf4P.css"
+      "main.CQQkDKBr.css"
     ]
   },
   "source/scripts/modules/init-animations.js": {
