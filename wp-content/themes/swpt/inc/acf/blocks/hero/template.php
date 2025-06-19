@@ -11,27 +11,27 @@
  * @var array $context The context provided to the block by the post or it's parent block.
  */
 $block_id             = ( isset( $block['anchor'] ) && ! empty( $block['anchor'] ) ) ? $block['anchor'] : $block['id'];
-$is_visible           = school_get_acf_field( 'is_visible' );
-$is_animation_enabled = school_get_acf_field( 'is_animation_enabled' );
-$heading              = school_get_acf_field( 'heading' );
-$heading_color        = school_get_acf_field( 'heading_color' );
-$heading_level        = school_get_acf_field( 'heading_level' );
-$heading_style        = school_get_acf_field( 'heading_style' );
-$show_gradient_layer  = school_get_acf_field( 'show_gradient_layer' );
-$gradient_tone        = school_get_acf_field( 'gradient_tone' );
-$gradient_direction   = school_get_acf_field( 'gradient_direction' );
-$background_color     = school_get_acf_field( 'background_color' );
-$height               = school_get_acf_field( 'height' );
-$horizontal_align     = school_get_acf_field( 'horizontal_align' );
-$vertical_align       = school_get_acf_field( 'vertical_align' );
-$caption              = school_get_acf_field( 'caption' );
-$caption_color        = school_get_acf_field( 'caption_color' );
-$cta                  = school_get_acf_field( 'cta' );
-$cta_style            = school_get_acf_field( 'cta_style' );
-$secondary_cta        = school_get_acf_field( 'secondary_cta' );
-$secondary_cta_style  = school_get_acf_field( 'secondary_cta_style' );
-$background_image     = school_get_acf_field( 'background_image' );
-$margin_bottom        = school_get_acf_field( 'margin_bottom' );
+$is_visible           = swpt_get_acf_field( 'is_visible' );
+$is_animation_enabled = swpt_get_acf_field( 'is_animation_enabled' );
+$heading              = swpt_get_acf_field( 'heading' );
+$heading_color        = swpt_get_acf_field( 'heading_color' );
+$heading_level        = swpt_get_acf_field( 'heading_level' );
+$heading_style        = swpt_get_acf_field( 'heading_style' );
+$show_gradient_layer  = swpt_get_acf_field( 'show_gradient_layer' );
+$gradient_tone        = swpt_get_acf_field( 'gradient_tone' );
+$gradient_direction   = swpt_get_acf_field( 'gradient_direction' );
+$background_color     = swpt_get_acf_field( 'background_color' );
+$height               = swpt_get_acf_field( 'height' );
+$horizontal_align     = swpt_get_acf_field( 'horizontal_align' );
+$vertical_align       = swpt_get_acf_field( 'vertical_align' );
+$caption              = swpt_get_acf_field( 'caption' );
+$caption_color        = swpt_get_acf_field( 'caption_color' );
+$cta                  = swpt_get_acf_field( 'cta' );
+$cta_style            = swpt_get_acf_field( 'cta_style' );
+$secondary_cta        = swpt_get_acf_field( 'secondary_cta' );
+$secondary_cta_style  = swpt_get_acf_field( 'secondary_cta_style' );
+$background_image     = swpt_get_acf_field( 'background_image' );
+$margin_bottom        = swpt_get_acf_field( 'margin_bottom' );
 
 if ( $is_preview ) :
 	$heading_level = 'span';

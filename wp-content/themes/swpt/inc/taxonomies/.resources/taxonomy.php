@@ -1,0 +1,41 @@
+<?php
+return [
+	'taxonomy'    => 'taxonomy-name',
+	'object_type' => 'object-type-name',
+	'args'        => [
+		'label'                 => __( '<replace>', 'swpt' ),
+		'labels'                => [
+			'name'              => __( '<replace>', 'swpt' ),
+			'singular_name'     => __( '<replace>', 'swpt' ),
+			'search_items'      => __( 'Search <replace>s', 'swpt' ),
+			'all_items'         => __( 'All <replace>s', 'swpt' ),
+			'view_item '        => __( 'View <replace>', 'swpt' ),
+			'parent_item'       => __( 'Parent <replace>', 'swpt' ),
+			'parent_item_colon' => __( 'Parent <replace>:', 'swpt' ),
+			'edit_item'         => __( 'Edit <replace>', 'swpt' ),
+			'update_item'       => __( 'Update <replace>', 'swpt' ),
+			'add_new_item'      => __( 'Add new <replace>', 'swpt' ),
+			'new_item_name'     => __( 'New <replace> name', 'swpt' ),
+			'menu_name'         => __( '<replace>s', 'swpt' ),
+		],
+		'description'           => '',
+		'public'                => true,
+		'publicly_queryable'    => true,
+		'show_in_nav_menus'     => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'show_tagcloud'         => true,
+		'show_in_rest'          => true,
+		'hierarchical'          => true,
+		'update_count_callback' => '',
+//		'rewrite'               => [
+//			'slug'         => 'slug',
+//			'hierarchical' => true
+//		],
+		'capabilities'          => [],
+		'meta_box_cb'           => null,
+		'show_admin_column'     => false,
+		'show_in_quick_edit'    => true,
+		'_builtin'              => false,
+	],
+];

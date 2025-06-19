@@ -2,7 +2,7 @@
 /**
  * Text Image Block Fields.
  *
- * @package school
+ * @package swpt
  */
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
@@ -10,47 +10,47 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $fields = new FieldsBuilder( 'text-form' );
 
 $fields->addMessage( 'block-name', '<span style="font-weight: bold; font-size: 32px">TEXT / FORM</span>', array(
-	'label' => __( 'Block name', 'school' ),
+	'label' => __( 'Block name', 'swpt' ),
 ) );
 
 $fields->addTab( 'general', array(
-	'label' => __( 'General', 'school' ),
+	'label' => __( 'General', 'swpt' ),
 ) );
 
 $fields->addTrueFalse( 'is_visible', array(
-	'label'         => __( 'Is Visible?', 'school' ),
+	'label'         => __( 'Is Visible?', 'swpt' ),
 	'ui'            => 1,
-	'ui_on_text'    => __( 'Yes', 'school' ),
-	'ui_off_text'   => __( 'No', 'school' ),
+	'ui_on_text'    => __( 'Yes', 'swpt' ),
+	'ui_off_text'   => __( 'No', 'swpt' ),
 	'default_value' => 1
 ) );
 
 $fields->addTrueFalse( 'is_animation_enabled', array(
-	'label'         => __( 'Enable animations?', 'school' ),
+	'label'         => __( 'Enable animations?', 'swpt' ),
 	'ui'            => 1,
-	'ui_on_text'    => __( 'Yes', 'school' ),
-	'ui_off_text'   => __( 'No', 'school' ),
+	'ui_on_text'    => __( 'Yes', 'swpt' ),
+	'ui_off_text'   => __( 'No', 'swpt' ),
 	'default_value' => 0
 ) );
 
 $fields->addText( 'heading', array(
-	'label' => __( 'Heading', 'school' ),
+	'label' => __( 'Heading', 'swpt' ),
 ) );
 
 $fields->addColorPicker( 'heading_color', array(
-	'label'         => __( 'Heading Color', 'school' ),
+	'label'         => __( 'Heading Color', 'swpt' ),
 	'default_value' => '#000000',
 ) );
 
 $fields->addSelect( 'heading_level', array(
-	'label'         => __( 'Heading Level (SEO)', 'school' ),
+	'label'         => __( 'Heading Level (SEO)', 'swpt' ),
 	'choices'       => array(
-		'h1' => __( 'H1', 'school' ),
-		'h2' => __( 'H2', 'school' ),
-		'h3' => __( 'H3', 'school' ),
-		'h4' => __( 'H4', 'school' ),
-		'h5' => __( 'H5', 'school' ),
-		'h6' => __( 'H6', 'school' ),
+		'h1' => __( 'H1', 'swpt' ),
+		'h2' => __( 'H2', 'swpt' ),
+		'h3' => __( 'H3', 'swpt' ),
+		'h4' => __( 'H4', 'swpt' ),
+		'h5' => __( 'H5', 'swpt' ),
+		'h6' => __( 'H6', 'swpt' ),
 	),
 	'return_format' => 'value',
 	'default_value' => 'h2',
@@ -60,14 +60,14 @@ $fields->addSelect( 'heading_level', array(
 ) );
 
 $fields->addSelect( 'heading_style', array(
-	'label'         => __( 'Heading Level (Style)', 'school' ),
+	'label'         => __( 'Heading Level (Style)', 'swpt' ),
 	'choices'       => array(
-		'h1' => __( 'H1', 'school' ),
-		'h2' => __( 'H2', 'school' ),
-		'h3' => __( 'H3', 'school' ),
-		'h4' => __( 'H4', 'school' ),
-		'h5' => __( 'H5', 'school' ),
-		'h6' => __( 'H6', 'school' ),
+		'h1' => __( 'H1', 'swpt' ),
+		'h2' => __( 'H2', 'swpt' ),
+		'h3' => __( 'H3', 'swpt' ),
+		'h4' => __( 'H4', 'swpt' ),
+		'h5' => __( 'H5', 'swpt' ),
+		'h6' => __( 'H6', 'swpt' ),
 	),
 	'return_format' => 'value',
 	'default_value' => 'h2',
@@ -77,29 +77,29 @@ $fields->addSelect( 'heading_style', array(
 ) );
 
 $fields->addTextarea( 'caption', array(
-	'label'     => __( 'Caption', 'school' ),
+	'label'     => __( 'Caption', 'swpt' ),
 	'rows'      => 3,
 	'new_lines' => 'br',
 ) );
 
 $fields->addColorPicker( 'caption_color', array(
-	'label'         => __( 'Caption color', 'school' ),
+	'label'         => __( 'Caption color', 'swpt' ),
 	'default_value' => '#000000',
 ) );
 
 $fields->addTextarea( 'text', array(
-	'label'     => __( 'Text', 'school' ),
+	'label'     => __( 'Text', 'swpt' ),
 	'rows'      => 5,
 	'new_lines' => 'br',
 ) );
 
 $fields->addColorPicker( 'text_color', array(
-	'label'         => __( 'Text color', 'school' ),
+	'label'         => __( 'Text color', 'swpt' ),
 	'default_value' => '#000000',
 ) );
 
 $fields->addTab( 'form_tab', array(
-	'label' => __( 'Form', 'school' ),
+	'label' => __( 'Form', 'swpt' ),
 ) );
 
 $forms = get_posts( array(
@@ -113,37 +113,37 @@ if ( ! empty( $forms ) ) {
 	}
 
 	$fields->addSelect( 'form', array(
-		'label'         => __( 'Select Form', 'school' ),
+		'label'         => __( 'Select Form', 'swpt' ),
 		'choices'       => $forms_choices,
 		'return_format' => 'value',
 	) );
 }
 
 $fields->addSelect( 'form_cta_style', array(
-	'label'   => __( 'Form CTA Style', 'school' ),
+	'label'   => __( 'Form CTA Style', 'swpt' ),
 	'choices' => array(
-		'purple-white' => __('Purple/White', 'school'),
-		'purple-black' => __('Purple/Black', 'school'),
-		'purple-border' => __('Purple border', 'school'),
-		'white-purple' => __('White/Purple', 'school'),
-		'white-black' => __('White/Black', 'school'),
+		'purple-white' => __('Purple/White', 'swpt'),
+		'purple-black' => __('Purple/Black', 'swpt'),
+		'purple-border' => __('Purple border', 'swpt'),
+		'white-purple' => __('White/Purple', 'swpt'),
+		'white-black' => __('White/Black', 'swpt'),
 	),
 ) );
 
 $fields->addTab( 'align', array(
-	'label' => __( 'Align', 'school' ),
+	'label' => __( 'Align', 'swpt' ),
 ) );
 
 $fields->addTrueFalse( 'view_is_row', array(
-	'label'         => __( 'View: Row/Column', 'school' ),
+	'label'         => __( 'View: Row/Column', 'swpt' ),
 	'ui'            => 1,
-	'ui_on_text'    => __( 'Row', 'school' ),
-	'ui_off_text'   => __( 'Column', 'school' ),
+	'ui_on_text'    => __( 'Row', 'swpt' ),
+	'ui_off_text'   => __( 'Column', 'swpt' ),
 	'default_value' => 1
 ) );
 
 $fields->addText( 'column_max_width', array(
-	'label'             => __( 'Column max width', 'school' ),
+	'label'             => __( 'Column max width', 'swpt' ),
 	'conditional_logic' => array(
 		array(
 			array(
@@ -157,20 +157,20 @@ $fields->addText( 'column_max_width', array(
 ) );
 
 $fields->addSelect( 'order', array(
-	'label'         => __( 'Text/Form order', 'school' ),
+	'label'         => __( 'Text/Form order', 'swpt' ),
 	'choices'       => array(
-		'text-form' => __( 'Text/Form', 'school' ),
-		'form-text' => __( 'Form/Text', 'school' ),
+		'text-form' => __( 'Text/Form', 'swpt' ),
+		'form-text' => __( 'Form/Text', 'swpt' ),
 	),
 	'default_value' => 'text-image',
 ) );
 
 $fields->addSelect( 'width_ratio', array(
-	'label'             => __( 'Text/Image Width Ratio', 'school' ),
+	'label'             => __( 'Text/Image Width Ratio', 'swpt' ),
 	'choices'           => array(
-		'1-1' => __( '1:1', 'school' ),
-		'2-3' => __( '2:3', 'school' ),
-		'3-2' => __( '3:2', 'school' ),
+		'1-1' => __( '1:1', 'swpt' ),
+		'2-3' => __( '2:3', 'swpt' ),
+		'3-2' => __( '3:2', 'swpt' ),
 	),
 	'conditional_logic' => array(
 		array(
@@ -185,47 +185,47 @@ $fields->addSelect( 'width_ratio', array(
 ) );
 
 $fields->addSelect( 'text_align', array(
-	'label'         => __( 'Text alignment', 'school' ),
+	'label'         => __( 'Text alignment', 'swpt' ),
 	'choices'       => array(
-		'left'   => __( 'Left', 'school' ),
-		'center' => __( 'Center', 'school' ),
-		'right'  => __( 'Right', 'school' ),
+		'left'   => __( 'Left', 'swpt' ),
+		'center' => __( 'Center', 'swpt' ),
+		'right'  => __( 'Right', 'swpt' ),
 	),
 	'default_value' => 'center',
 ) );
 
 $fields->addSelect( 'horizontal_align', array(
-	'label'         => __( 'Vertical alignment', 'school' ),
+	'label'         => __( 'Vertical alignment', 'swpt' ),
 	'choices'       => array(
-		'top'    => __( 'Top', 'school' ),
-		'middle' => __( 'Middle', 'school' ),
-		'bottom' => __( 'Bottom', 'school' ),
+		'top'    => __( 'Top', 'swpt' ),
+		'middle' => __( 'Middle', 'swpt' ),
+		'bottom' => __( 'Bottom', 'swpt' ),
 	),
 	'default_value' => 'middle',
 ) );
 
 $fields->addTab( 'background', array(
-	'label' => __( 'BG', 'school' ),
+	'label' => __( 'BG', 'swpt' ),
 ) );
 
 $fields->addColorPicker( 'background_color', array(
-	'label' => __( 'Background color', 'school' ),
+	'label' => __( 'Background color', 'swpt' ),
 ) );
 
 $fields->addImage( 'background_image', array(
-	'label' => __( 'Background image', 'school' ),
+	'label' => __( 'Background image', 'swpt' ),
 ) );
 
 $fields->addTrueFalse( 'show_gradient_layer', array(
-	'label'         => __( 'Show Gradient layer?', 'school' ),
+	'label'         => __( 'Show Gradient layer?', 'swpt' ),
 	'ui'            => 1,
-	'ui_on_text'    => __( 'Yes', 'school' ),
-	'ui_off_text'   => __( 'No', 'school' ),
+	'ui_on_text'    => __( 'Yes', 'swpt' ),
+	'ui_off_text'   => __( 'No', 'swpt' ),
 	'default_value' => 0
 ) );
 
 $fields->addColorPicker( 'gradient_tone', array(
-	'label'             => __( 'Gradient tone', 'school' ),
+	'label'             => __( 'Gradient tone', 'swpt' ),
 	'conditional_logic' => array(
 		array(
 			array(
@@ -240,16 +240,16 @@ $fields->addColorPicker( 'gradient_tone', array(
 ) );
 
 $fields->addSelect( 'gradient_direction', array(
-	'label'             => __( 'Height', 'school' ),
+	'label'             => __( 'Height', 'swpt' ),
 	'choices'           => array(
-		'top'          => __( 'To Top', 'school' ),
-		'bottom'       => __( 'To Bottom', 'school' ),
-		'left'         => __( 'To Left', 'school' ),
-		'bottom_left'  => __( 'To Bottom Left', 'school' ),
-		'top_left'     => __( 'To Top Left', 'school' ),
-		'right'        => __( 'To Right', 'school' ),
-		'bottom_right' => __( 'To Bottom Right', 'school' ),
-		'top_right'    => __( 'To Top Right', 'school' ),
+		'top'          => __( 'To Top', 'swpt' ),
+		'bottom'       => __( 'To Bottom', 'swpt' ),
+		'left'         => __( 'To Left', 'swpt' ),
+		'bottom_left'  => __( 'To Bottom Left', 'swpt' ),
+		'top_left'     => __( 'To Top Left', 'swpt' ),
+		'right'        => __( 'To Right', 'swpt' ),
+		'bottom_right' => __( 'To Bottom Right', 'swpt' ),
+		'top_right'    => __( 'To Top Right', 'swpt' ),
 	),
 	'conditional_logic' => array(
 		array(
@@ -264,10 +264,10 @@ $fields->addSelect( 'gradient_direction', array(
 ) );
 
 $fields->addSelect( 'margin_bottom', array(
-	'label'         => __( 'Bottom Indent', 'school' ),
+	'label'         => __( 'Bottom Indent', 'swpt' ),
 	'choices'       => array(
-		'none'     => __( 'None', 'school' ),
-		'standard' => __( 'Standard', 'school' ),
+		'none'     => __( 'None', 'swpt' ),
+		'standard' => __( 'Standard', 'swpt' ),
 	),
 	'default_value' => 'standard',
 ) );

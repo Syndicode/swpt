@@ -1,6 +1,6 @@
 <?php
-$phones    = school_get_acf_field( 'contacts_phones', 'option' );
-$copyright = school_get_acf_field( 'footer_copyright', 'option' );
+$phones    = swpt_get_acf_field( 'contacts_phones', 'option' );
+$copyright = swpt_get_acf_field( 'footer_copyright', 'option' );
 ?>
 
 <footer class="footer">

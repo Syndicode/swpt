@@ -1,15 +1,12 @@
 <?php
 
-use School\TestController;
-use School\UserController;
+use SWPT\RestApiController;
 
-require_once TEMPLATE_DIR . '/inc/rest-api/TestController.php';
-require_once TEMPLATE_DIR . '/inc/rest-api/UserController.php';
+//require_once TEMPLATE_DIR . '/inc/rest-api/Controller.php';
 
-add_action( 'rest_api_init', function () {
-	$test = new TestController();
-	$test->register_routes();
+function swpt_rest_api_init(): void {
+//	$controller = new Controller();
+//	$controller->register_routes();
+}
 
-	$user = new UserController();
-	$user->register_routes();
-} );
+add_action( 'rest_api_init', 'swpt_rest_api_init' );

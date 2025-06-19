@@ -2,7 +2,7 @@
 	<a href="<?= home_url(); ?>" class="header__logo">
 		<img src="<?= TEMPLATE_DIR_URI; ?>/assets/images/swpt-logo-invert.svg" class="header__logo-image" alt="Syndicode WordPress Theme">
 	</a>
-	<?php $phones = school_get_acf_field( 'contacts_phones', 'option' );
+	<?php $phones = swpt_get_acf_field( 'contacts_phones', 'option' );
 	if ( ! empty( $phones ) ) : ?>
 		<div class="header__phones">
 			<?php foreach ( $phones as $phone ): ?>

@@ -19,11 +19,8 @@
 @import "@styles/components/footer.css";
 @import "@styles/components/section.css";
 @import "@styles/components/text.css";
-@import "@styles/components/questions.css";
-@import "@styles/components/answers.css";
 @import "@styles/components/loader.css";
 @import "@styles/components/form.css";
-@import "@styles/components/chapters.css";
 
 /* Blocks */
 @import "@styles/blocks/hero.css";

@@ -26,10 +26,10 @@ $fields->addTrueFalse( 'is_visible', array(
 ) );
 
 $fields->addTrueFalse( 'is_animation_enabled', array(
-	'label'         => __( 'Enable animations?', 'school' ),
+	'label'         => __( 'Enable animations?', 'swpt' ),
 	'ui'            => 1,
-	'ui_on_text'    => __( 'Yes', 'school' ),
-	'ui_off_text'   => __( 'No', 'school' ),
+	'ui_on_text'    => __( 'Yes', 'swpt' ),
+	'ui_off_text'   => __( 'No', 'swpt' ),
 	'default_value' => 0
 ) );
 
@@ -104,11 +104,11 @@ $fields->addLink( 'cta', array(
 $fields->addSelect( 'cta_style', array(
 	'label'   => __( 'CTA Style', 'dovira' ),
 	'choices' => array(
-		'purple-white' => __('Purple/White', 'school'),
-		'purple-black' => __('Purple/Black', 'school'),
-		'purple-border' => __('Purple border', 'school'),
-		'white-purple' => __('White/Purple', 'school'),
-		'white-black' => __('White/Black', 'school'),
+		'purple-white' => __('Purple/White', 'swpt'),
+		'purple-black' => __('Purple/Black', 'swpt'),
+		'purple-border' => __('Purple border', 'swpt'),
+		'white-purple' => __('White/Purple', 'swpt'),
+		'white-black' => __('White/Black', 'swpt'),
 	),
 ) );
 

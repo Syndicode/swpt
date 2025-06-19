@@ -2,7 +2,7 @@
 /**
  * Option page Settings
  *
- * @package school
+ * @package swpt
  */
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
@@ -15,13 +15,13 @@ function acf_add_options_page_colors_fields(): void {
 
 	$fields = new FieldsBuilder( 'colors' );
 
-	$fields->addRepeater( 'fonts', array(
+	$fields->addRepeater( 'colors', array(
 		'layout' => 'block',
-		'button_label' => 'Add Font',
+		'button_label' => 'Add Color',
 	));
 
 	$fields->setLocation( 'options_page', '==', 'acf-options-colors' );
 	acf_add_local_field_group( $fields->build() );
 }
 
-add_action( 'acf/init', 'acf_add_options_page_colors_fields' );
+//add_action( 'acf/init', 'acf_add_options_page_colors_fields' );

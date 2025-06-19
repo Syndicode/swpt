@@ -1,6 +1,6 @@
 <?php
 
-function register_taxonomies() {
+function swpt_register_taxonomies(): void {
 	$taxonomies       = [];
 	$taxonomies_files = glob( get_template_directory() . '/inc/taxonomies/*.php' );
 
@@ -15,4 +15,4 @@ function register_taxonomies() {
 	}
 }
 
-add_action( 'init', 'register_taxonomies' );
+add_action( 'init', 'swpt_register_taxonomies' );

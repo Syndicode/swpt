@@ -91,7 +91,7 @@ if ( ! function_exists( 'swpt_setup' ) ) {
 
 		add_theme_support( 'editor-color-palette', array(
 			array(
-				'name'  => __( 'Cyan', 'school' ),
+				'name'  => __( 'Cyan', 'swpt' ),
 				'slug'  => "color-cyan",
 				'color' => '#1995AD',
 			)
@@ -204,7 +204,6 @@ function swpt_admin_scripts(): void {
 }
 
 add_action( 'admin_enqueue_scripts', 'swpt_admin_scripts' );
-
 
 
 /**
@@ -377,7 +376,7 @@ add_action( 'init', 'swpt_cleanup' );
  *
  * @return bool|array
  */
-function school_allowed_block_types( bool|array $allowed_blocks, WP_Block_Editor_Context $editor_context ): bool|array {
+function swpt_allowed_block_types( bool|array $allowed_blocks, WP_Block_Editor_Context $editor_context ): bool|array {
 	return array(
 		'acf/accordion',
 		'acf/contacts',
@@ -391,244 +390,15 @@ function school_allowed_block_types( bool|array $allowed_blocks, WP_Block_Editor
 	);
 }
 
-add_filter( 'allowed_block_types_all', 'school_allowed_block_types', 10, 2 );
+add_filter( 'allowed_block_types_all', 'swpt_allowed_block_types', 10, 2 );
 
 /**
  * Disable autop for Contact Form 7 Forms
  */
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
-/**
- * @param array $vars
- *
- * @return array
- */
-function school_add_query_vars( array $vars ): array {
-	$vars[] = 'sign-in';
-	$vars[] = 'sign-up';
-	$vars[] = 'profile';
-	$vars[] = 'testing';
-	$vars[] = 'internal-exam';
-
-	return $vars;
-}
-
-add_filter( 'query_vars', 'school_add_query_vars' );
 
 
-/**
- * @return void
- */
-function school_add_rewrite_rule(): void {
-	add_rewrite_rule( '^sign-in?', 'index.php?sign-in=1', 'top' );
-	add_rewrite_rule( '^sign-up?', 'index.php?sign-up=1', 'top' );
-	add_rewrite_rule( '^profile?', 'index.php?profile=1', 'top' );
-	add_rewrite_rule( '^testing?', 'index.php?testing=1', 'top' );
-	add_rewrite_rule( '^internal-exam?', 'index.php?internal-exam=1', 'top' );
 
-}
 
-add_action( 'init', 'school_add_rewrite_rule' );
 
-/**
- * @param string $template
- *
- * @return string
- */
-function school_template_include( string $template ): string {
-	if ( get_query_var( 'sign-in' ) && file_exists( WP_CONTENT_DIR . '/themes/school/templates/sign-in.php' ) ) {
-		return WP_CONTENT_DIR . '/themes/school/templates/sign-in.php';
-	}
-
-	if ( get_query_var( 'sign-up' ) && file_exists( WP_CONTENT_DIR . '/themes/school/templates/sign-up.php' ) ) {
-		return WP_CONTENT_DIR . '/themes/school/templates/sign-up.php';
-	}
-
-	if ( get_query_var( 'profile' ) && file_exists( WP_CONTENT_DIR . '/themes/school/templates/profile.php' ) ) {
-		return WP_CONTENT_DIR . '/themes/school/templates/profile.php';
-	}
-
-	if ( get_query_var( 'testing' ) && file_exists( WP_CONTENT_DIR . '/themes/school/templates/testing.php' ) ) {
-		return WP_CONTENT_DIR . '/themes/school/templates/testing.php';
-	}
-
-	if ( get_query_var( 'internal-exam' ) && file_exists( WP_CONTENT_DIR . '/themes/school/templates/internal-exam.php' ) ) {
-		return WP_CONTENT_DIR . '/themes/school/templates/internal-exam.php';
-	}
-
-	return $template;
-}
-
-add_filter( 'template_include', 'school_template_include', 100, 1 );
-
-/**
- * @param array $title_parts
- *
- * @return array
- */
-function school_modify_page_title( array $title_parts ): array {
-	global $wp;
-
-	// Page Title for Sign-up template
-	if ( home_url( $wp->request ) === home_url() . '/sign-up' ) {
-		$title_parts['title'] = 'Реєстрація - ' . $title_parts['title'];
-	}
-
-	// Page Title for Sign-in template
-	if ( home_url( $wp->request ) === home_url() . '/sign-in' ) {
-		$title_parts['title'] = 'Увійти - ' . $title_parts['title'];
-	}
-
-	// Page Title for Profile template
-	if ( home_url( $wp->request ) === home_url() . '/profile' ) {
-		$title_parts['title'] = 'Кабінет - ' . $title_parts['title'];
-	}
-
-	// Page Title for Testing template
-	if ( home_url( $wp->request ) === home_url() . '/testing' ) {
-		$title_parts['title'] = 'Тестування - ' . $title_parts['title'];
-	}
-
-	// Page Title for Internal exam template
-	if ( home_url( $wp->request ) === home_url() . '/internal-exam' ) {
-		$title_parts['title'] = 'Внутрішній іспит - ' . $title_parts['title'];
-	}
-
-	return $title_parts;
-}
-
-add_filter( 'document_title_parts', 'school_modify_page_title' );
-
-/**
- * @return void
- */
-function school_on_theme_deactivate(): void {
-	remove_role( 'student' );
-}
-
-add_action( 'switch_theme', 'school_on_theme_deactivate' );
-
-/**
- * @return void
- */
-function school_on_theme_activate(): void {
-	add_role( 'student', __( 'Student', 'school;' ), array(
-			'take_course' => true,
-		)
-	);
-}
-
-add_action( 'after_switch_theme', 'school_on_theme_activate' );
-
-/**
- * @return string
- */
-function school_default_group_title_filter(): string {
-	global $post_type;
-	if ( 'group' === $post_type ) {
-
-		return date( 'd-m-Y' );
-	}
-
-	return '';
-}
-
-add_filter( 'default_title', 'school_default_group_title_filter' );
-
-if ( ! current_user_can( 'manage_options' ) ) {
-	add_filter( 'show_admin_bar', '__return_false' );
-}
-
-/**
- * @param WP_User $user
- *
- * @return array
- */
-function school_get_user_study_state( WP_User $user ): array {
-	$user_study_state = get_user_meta( $user->ID, 'user_study_state', true ) ?: array();
-
-	return is_array( $user_study_state ) ? $user_study_state : array();
-}
-
-/**
- * @param WP_User $user
- *
- * @return void
- */
-function school_update_user_study_state( WP_User $user ): void {
-	$user_study_state = get_user_meta( $user->ID, 'user_study_state', true ) ?: array();
-
-	if ( ! is_array( $user_study_state ) ) {
-		$user_study_state = array();
-	}
-
-	$chapters = get_terms( array(
-		'taxonomy'   => 'chapter',
-		'hide_empty' => false,
-	) );
-
-	if ( ! empty( $chapters ) ) {
-		foreach ( $chapters as $chapter ) {
-			if ( $chapter->parent !== 0 ) {
-				$questions = get_posts( array(
-					'numberposts' => - 1,
-					'post_type'   => 'question',
-					'tax_query'   => array(
-						array(
-							'taxonomy' => 'chapter',
-							'field'    => 'term_id',
-							'terms'    => $chapter->term_id
-						)
-					)
-				) );
-
-				$user_study_state[ $chapter->term_id ] = array(
-					'id'              => $chapter->term_id,
-					'count_questions' => is_countable( $questions ) ? count( $questions ) : 0,
-					'best_result'     => isset( $user_study_state[ $chapter->term_id ] ) ? $user_study_state[ $chapter->term_id ]['best_result'] : 0,
-					'count_passed'    => isset( $user_study_state[ $chapter->term_id ] ) ? $user_study_state[ $chapter->term_id ]['count_passed'] : 0
-				);
-			}
-		}
-	}
-
-	update_user_meta( $user->ID, 'user_study_state', $user_study_state );
-}
-
-/**
- * @param array $cats
- * @param array $into
- * @param int $parent_id
- *
- * @return void
- */
-function school_sort_terms_hierarchically( array &$cats, array &$into, int $parent_id = 0 ): void {
-	foreach ( $cats as $i => $cat ) {
-		if ( $cat->parent == $parent_id ) {
-			$into[ $cat->term_id ] = $cat;
-			unset( $cats[ $i ] );
-		}
-	}
-
-	foreach ( $into as $topCat ) {
-		$topCat->children = array();
-		school_sort_terms_hierarchically( $cats, $topCat->children, $topCat->term_id );
-	}
-}
-
-function school_get_hierarchical_chapters(): array {
-	$chapters = get_terms( array(
-		'taxonomy'   => 'chapter',
-		'hide_empty' => false,
-		'orderby'    => 'id',
-	) );
-
-	if ( ! empty( $chapters ) ) {
-		$sorted_chapters = array();
-		school_sort_terms_hierarchically( $chapters, $sorted_chapters );
-
-		return $sorted_chapters;
-	}
-
-	return array();
-}

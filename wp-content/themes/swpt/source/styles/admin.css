@@ -15,8 +15,6 @@
 @import "@styles/components/footer.css";
 @import "@styles/components/section.css";
 @import "@styles/components/text.css";
-@import "@styles/components/questions.css";
-@import "@styles/components/answers.css";
 
 /* Blocks */
 @import "@styles/blocks/hero.css";

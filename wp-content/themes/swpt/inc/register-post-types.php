@@ -1,6 +1,6 @@
 <?php
 
-function register_post_types() {
+function swpt_register_post_types(): void {
 	$post_types       = [];
 	$post_types_files = glob( get_template_directory() . '/inc/post-types/*.php' );
 
@@ -15,5 +15,5 @@ function register_post_types() {
 	}
 }
 
-add_action( 'init', 'register_post_types' );
+add_action( 'init', 'swpt_register_post_types' );
 

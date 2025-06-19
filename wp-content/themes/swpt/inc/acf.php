@@ -32,7 +32,7 @@ if ( function_exists( 'acf_add_local_field_group' ) && $handle = opendir( $block
  *
  * @return mixed
  */
-function school_get_acf_field(
+function swpt_get_acf_field(
 	string $selector,
 	mixed $post_id = false,
 	bool $format_value = true,

@@ -11,23 +11,23 @@
  * @var array $context The context provided to the block by the post or it's parent block.
  */
 $block_id             = ( isset( $block['anchor'] ) && ! empty( $block['anchor'] ) ) ? $block['anchor'] : $block['id'];
-$is_visible           = school_get_acf_field( 'is_visible' );
-$is_animation_enabled = school_get_acf_field( 'is_animation_enabled' );
-$heading              = school_get_acf_field( 'heading' );
-$heading_color        = school_get_acf_field( 'heading_color' );
-$heading_level        = school_get_acf_field( 'heading_level' );
-$heading_style        = school_get_acf_field( 'heading_style' );
-$caption              = school_get_acf_field( 'caption' );
-$caption_color        = school_get_acf_field( 'caption_color' );
-$header_text_align    = school_get_acf_field( 'header_text_align' );
-$gallery              = school_get_acf_field( 'gallery' );
-$grid_full_width      = school_get_acf_field( 'grid_full_width' );
-$grid_columns         = school_get_acf_field( 'grid_columns' );
-$show_gradient_layer  = school_get_acf_field( 'show_gradient_layer' );
-$gradient_tone        = school_get_acf_field( 'gradient_tone' );
-$gradient_direction   = school_get_acf_field( 'gradient_direction' );
-$background_color     = school_get_acf_field( 'background_color' );
-$margin_bottom        = school_get_acf_field( 'margin_bottom' );
+$is_visible           = swpt_get_acf_field( 'is_visible' );
+$is_animation_enabled = swpt_get_acf_field( 'is_animation_enabled' );
+$heading              = swpt_get_acf_field( 'heading' );
+$heading_color        = swpt_get_acf_field( 'heading_color' );
+$heading_level        = swpt_get_acf_field( 'heading_level' );
+$heading_style        = swpt_get_acf_field( 'heading_style' );
+$caption              = swpt_get_acf_field( 'caption' );
+$caption_color        = swpt_get_acf_field( 'caption_color' );
+$header_text_align    = swpt_get_acf_field( 'header_text_align' );
+$gallery              = swpt_get_acf_field( 'gallery' );
+$grid_full_width      = swpt_get_acf_field( 'grid_full_width' );
+$grid_columns         = swpt_get_acf_field( 'grid_columns' );
+$show_gradient_layer  = swpt_get_acf_field( 'show_gradient_layer' );
+$gradient_tone        = swpt_get_acf_field( 'gradient_tone' );
+$gradient_direction   = swpt_get_acf_field( 'gradient_direction' );
+$background_color     = swpt_get_acf_field( 'background_color' );
+$margin_bottom        = swpt_get_acf_field( 'margin_bottom' );
 
 if ( $is_preview ) :
 	$heading_level = 'span';
